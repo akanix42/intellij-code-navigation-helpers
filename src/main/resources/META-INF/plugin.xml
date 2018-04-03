@@ -1,0 +1,64 @@
+<idea-plugin>
+    <id>com.nathantreid.codeNavigationHelpers</id>
+    <name>Code Navigation Helpers</name>
+    <vendor email="nathan-code@nathantreid.com" url="http://nathantreid.com">Nathan Reid</vendor>
+
+    <description><![CDATA[
+    Enter short description for your plugin here.<br>
+    <em>most HTML tags may be used</em>
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+
+    -->
+    <depends>com.intellij.modules.lang</depends>
+    <depends>JavaScript</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="com.nathantreid.codeNavigationHelpers.Actions.MoveCaretToFunctionName"
+                class="com.nathantreid.codeNavigationHelpers.Actions.MoveCaretToFunctionNameAction"
+                text="Jump To Current Function&#39;s Name" description="jumps to the current function&#39;s name"/>
+        <action id="com.nathantreid.codeNavigationHelpers.Actions.MoveCaretToFunctionParameters"
+                class="com.nathantreid.codeNavigationHelpers.Actions.MoveCaretToFunctionParametersAction"
+                text=".Jump To Function Parameters"
+                description="Places the cursor at the beginning of the first parameter in the function"/>
+        <action id="com.nathantreid.codeNavigationHelpers.Actions.MoveCaretToNextParameter"
+                class="com.nathantreid.codeNavigationHelpers.Actions.MoveCaretToNextParameter"
+                text="Move Caret To Next Parameter"
+                description="Moves the caret to the next parameter in the parameter list. Has no effect if you are not in a function&#39;s parameter list."/>
+        <action id="com.nathantreid.codeNavigationHelpers.Actions.MoveCaretToPreviousParameter"
+                class="com.nathantreid.codeNavigationHelpers.Actions.MoveCaretToPreviousParameter"
+                text="Move Caret To Previous Parameter"
+                description="Moves the caret to the previous parameter in the parameter list. Has no effect if you are not in a function&#39;s parameter list."/>
+        />
+        <action id="com.nathantreid.codeNavigationHelpers.Actions.MoveCaretToNextFunctionName"
+                class="com.nathantreid.codeNavigationHelpers.Actions.MoveCaretToNextFunctionNameAction"
+                text="Move Caret To Next Function Name"
+                description="Moves the caret to the name of the next function in either the current or a parent scope."/>
+        <action id="com.nathantreid.codeNavigationHelpers.Actions.MoveCaretToPreviousFunctionName"
+                class="com.nathantreid.codeNavigationHelpers.Actions.MoveCaretToPreviousFunctionNameAction"
+                text="Move Caret To Previous Function Name"/>
+        <action id="com.nathantreid.codeNavigationHelpers.Actions.MoveCaretToClassName"
+                class="com.nathantreid.codeNavigationHelpers.Actions.MoveCaretToClassNameAction"
+                text="Move Caret To Class Name"
+                description="Moves the caret to the beginning of the current class&#39;s name"/>
+        <action id="com.nathantreid.codeNavigationHelpers.Actions.MoveCaretToCall"
+                class="com.nathantreid.codeNavigationHelpers.Actions.MoveCaretToCall" text="Move Caret To Call"
+                description="Moves the caret to just before the start of the current argument list"/>
+        <action id="com.nathantreid.codeNavigationHelpers.Actions.MoveCaretToPreviousArgument"
+                class="com.nathantreid.codeNavigationHelpers.Actions.MoveCaretToPreviousArgument"
+                text="Move Caret To Previous Argument"
+                description="Moves the caret to the previous argument in the current argument list"/>
+        <action id="com.nathantreid.codeNavigationHelpers.Actions.MoveCaretToNextArgument"
+                class="com.nathantreid.codeNavigationHelpers.Actions.MoveCaretToNextArgument"
+                text="Move Caret To Next Argument"
+                description="Moves the caret to the next argument in the current argument list"/>
+    </actions>
+</idea-plugin>
